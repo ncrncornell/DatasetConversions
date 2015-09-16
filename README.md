@@ -14,10 +14,31 @@ CED2AR can automatically create DDI2.5 codebooks from SPSS datasets.  This proje
 		select name of the sas dataset excluding sas7bdat extension Ex. sasdataset;
 	run;
 	
-##### STEP 2: Convert SAS transport dataset into SPSS using this SPSS script 
+##### STEP II: Convert SAS transport dataset into SPSS using this SPSS script 
 	get sas data = 'Fully qualified path and file name of the transport file. Ex. c:\data\sastransport\sasdataset.xpt'.
 	save outfile = 'Fully qualified path and file name of the SPSS file. Ex. c:\data\spssdatasets\sasdataset.sav'.
 	execute .
+
+#### 
+
+
+#### Direct conversion to SAS to SPSS
+This is a one step process to convert SAS to SPSS. With this type of conversion, sometimes CED2AR is unable to process variable level summary statistics. 
+You may want to choose ignore summary statistics from the CED2AR uplaod menu.
+
+
+	LIBNAME SDF "location of the dataset excluding the dataset name.  Ex. c:\data\sasdatasets";
+	filename exprt 'Fully qualified path and file name of the SPSS file. Ex. c:\data\spaadata\spssdataset.sav';
+
+	proc surveyselect  DATA=SDF.sasdataSetNameExcludingExtension
+		method=srs n=300 out=sasdataSetNameExcludingExtension;
+	run;
+
+	PROC EXPORT DATA=sasdataSetNameExcludingExtension
+        OUTFILE=exprt
+        DBMS=SPSS REPLACE;
+	RUN;
+
 
 
 
