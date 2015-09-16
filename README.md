@@ -5,8 +5,8 @@ CED2AR can automatically create DDI2.5 codebooks from SPSS datasets.  This proje
 
 # SAS to SPSS
 
-## Best way to convert SAS dataset into SPSS is follow a two step process.
-### Convert SAS dataset into sas transport format using this scrpt
+#### Best way to convert SAS dataset into SPSS is follow a two step process.
+##### Convert SAS dataset into sas transport format using this script
 	
 	libname sasdata 'location of the dataset excluding the dataset name.  Ex. c:\data\sasdatasets';
 	libname sasspss xport 'Fully qualified path and file name of the transport file. Ex. c:\data\sastransport\sasdataset.xpt';
@@ -14,7 +14,7 @@ CED2AR can automatically create DDI2.5 codebooks from SPSS datasets.  This proje
 		select name of the sas dataset excluding sas7bdat extension Ex. sasdataset;
 	run;
 
-### 
+ 
 
 
 
