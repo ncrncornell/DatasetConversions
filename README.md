@@ -23,8 +23,8 @@ CED2AR can automatically create DDI2.5 codebooks from SPSS datasets.  This proje
 
 
 #### Direct conversion from SAS to SPSS
-This is a one step process to convert SAS to SPSS. With this type of conversion, sometimes CED2AR is unable to process variable level summary statistics. 
-(There is an option to ignore variable level summary statistics in CED2AR upload menu.)
+This is a one step process to convert SAS to SPSS using sas script. With this type of conversion, CED2AR program is unable to process variable level summary statistics.
+This option works if variable level summary statistics are not important.  You should use option to ignore variable level summary statistics when uploading the dataset using CED2AR upload menu.
 
 
 	LIBNAME SDF "location of the dataset excluding the dataset name.  Ex. c:\data\sasdatasets";
