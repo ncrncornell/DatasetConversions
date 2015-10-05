@@ -3,7 +3,7 @@ DatasetConversions
 CED2AR can automatically create DDI2.5 codebooks from SPSS and STATA (Versions 8 thru 13) datasets.  Codebooks are created by just uploading supported datasets into CED2AR.
 This project provides tools to convert SAS datasets into STATA and SPSS datasets.  (CED2AR recommends to convert your SAS data set into STATA dataset)
 
-# SAS to SPSS
+# SAS to STATA
 
 # SAS to SPSS
 
