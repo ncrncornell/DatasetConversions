@@ -1,7 +1,0 @@
-	
-##### STEP II: Convert SAS transport dataset into SPSS using this SPSS script 
-	get sas data = 'Fully qualified path and file name of the transport file. Ex. c:\data\sastransport\sasdataset.xpt'.
-	save outfile = 'Fully qualified path and file name of the SPSS file. Ex. c:\data\spssdatasets\sasdataset.sav'.
-	execute .
-
-
