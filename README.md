@@ -42,7 +42,8 @@ This option works if variable level summary statistics are not important.  You s
 	RUN;
 
 
-
+* [Open an existing repository](https://github.com/centic9/jgit-cookbook/blob/master/src/main/java/org/dstadler/jgit/OpenRepository.java)
+* [Create a new repository](https://github.com/centic9/jgit-cookbook/blob/master/src/main/java/org/dstadler/jgit/CreateNewRepository.java)
 
  
 
