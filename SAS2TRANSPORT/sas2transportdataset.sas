@@ -1,4 +1,3 @@
-##### STEP I: Convert SAS dataset into SAS transport dataset using this SAS script
 	
 	libname sasdata 'location of the dataset excluding the dataset name.  Ex. c:\data\sasdatasets';
 	libname sasspss xport 'Fully qualified path and file name of the transport file. Ex. c:\data\sastransport\sasdataset.xpt';
