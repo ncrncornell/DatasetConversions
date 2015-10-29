@@ -4,6 +4,12 @@ CED2AR can automatically create DDI2.5 codebooks from SPSS and STATA (Versions 8
 This project provides tools to convert SAS datasets into STATA and SPSS datasets.  (CED2AR recommends to convert your SAS data set into STATA dataset)
 
 # SAS to STATA
+Open the SAS data set in SAS program and ...
+##### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script
+https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sas2transportdataset.sas
+
+##### STEP II: Convert SAS transport dataset into SPSS using  SPSS script
+https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sas2transportdataset.sas
 
 # SAS to SPSS
 
