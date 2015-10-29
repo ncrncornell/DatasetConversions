@@ -6,9 +6,9 @@ This project provides tools to convert SAS datasets into STATA and SPSS datasets
 # SAS to STATA
 Open the SAS data set in SAS program and ...
 ##### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script
-https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sas2transportdataset.sas
+https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2TRANSPORT/sas2transportdataset.sas
 
-##### STEP II: Convert SAS transport dataset into SPSS using  SPSS script
+##### STEP II: Convert SAS transport dataset into STATA using  SAS script
 https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sas2transportdataset.sas
 
 # SAS to SPSS
@@ -16,7 +16,7 @@ https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sas2trans
 ### Best way to convert SAS dataset into SPSS is two step process listed below.  
 
 ##### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script
-https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sas2transportdataset.sas
+https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2TRANSPORT/sas2transportdataset.sas
 	
 ##### STEP II: Convert SAS transport dataset into SPSS using  SPSS script  sastransport2spss.sbs
 https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sastransport2spss.sbs
