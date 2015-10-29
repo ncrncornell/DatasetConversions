@@ -8,13 +8,8 @@ This project provides tools to convert SAS datasets into STATA and SPSS datasets
 # SAS to SPSS
 
 #### Best way to convert SAS dataset into SPSS is two step process listed below.  
-##### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script in sas2transportdataset.sas
-	
-	libname sasdata 'location of the dataset excluding the dataset name.  Ex. c:\data\sasdatasets';
-	libname sasspss xport 'Fully qualified path and file name of the transport file. Ex. c:\data\sastransport\sasdataset.xpt';
-	proc copy in=sasdata out=sasspss; 
-		select name of the sas dataset excluding sas7bdat extension Ex. sasdataset;
-	run;
+##### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script in
+			  https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/convert2spss.sas
 	
 ##### STEP II: Convert SAS transport dataset into SPSS using  SPSS script  sastransport2spss.sbs
 	get sas data = 'Fully qualified path and file name of the transport file. Ex. c:\data\sastransport\sasdataset.xpt'.
@@ -42,8 +37,6 @@ This option works if variable level summary statistics are not important.  You s
 	RUN;
 
 
-* [Open an existing repository](https://github.com/centic9/jgit-cookbook/blob/master/src/main/java/org/dstadler/jgit/OpenRepository.java)
-* [Create a new repository](https://github.com/centic9/jgit-cookbook/blob/master/src/main/java/org/dstadler/jgit/CreateNewRepository.java)
 
  
 
