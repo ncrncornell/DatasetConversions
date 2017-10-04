@@ -1,2 +1,5 @@
-proc export data=SASHELP.CLASS outfile= "fully qualified path of stata file. ex. c:\data\abc.dta";
+%let dataset=MYDATA;
+%let here=".";
+
+proc export data=HERE.&dataset. outfile="&dataset..dta" dbms=dta replace;
 run;

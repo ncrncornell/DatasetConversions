@@ -1,35 +1,39 @@
 DatasetConversions
 ==================
 CED2AR can automatically create DDI2.5 codebooks from SPSS and STATA (Versions 8 thru 13) datasets.  Codebooks are created by just uploading supported datasets into CED2AR.
-This project provides tools to convert SAS datasets into STATA and SPSS datasets.  (CED2AR recommends to convert your SAS data set into STATA dataset)
 
-# SAS to STATA
-Open the SAS data set and ...
-##### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script
-https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2TRANSPORT/sas2transportdataset.sas
+CED2AR cannot convert SAS datasets. We suggest to convert SAS to SPSS for uploading (as of 2017, there are issues with the *converted* STATA datasets, though native STATA datasets work just fine). However, for future reference, SAS to STATA conversions are also available.
 
-##### STEP II: Convert SAS transport dataset into STATA using  SAS script
-https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sas2transportdataset.sas
 
-# SAS to SPSS
+## SAS to SPSS (with access to both SAS and SPSS)
 
-### Recommended way to convert SAS dataset into SPSS is ...  
+Recommended way to convert SAS dataset into SPSS is ...  
 
-##### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script
-https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2TRANSPORT/sas2transportdataset.sas
+### STEP I: Convert SAS dataset into SAS transport dataset using  SAS script
+[SAS2TRANSPORT/sas2transportdataset.sas](SAS2TRANSPORT/sas2transportdataset.sas)
 	
-##### STEP II: Convert SAS transport dataset into SPSS using  SPSS script  sastransport2spss.sbs
-https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/sastransport2spss.sbs
-###
+### STEP II: Convert SAS transport dataset into SPSS using  SPSS script  sastransport2spss.sbs
+[SAS2SPSS/sastransport2spss.sbs](SAS2SPSS/sastransport2spss.sbs)
 
 
 ### Direct conversion from SAS to SPSS
-This is a one step process to convert SAS to SPSS using sas script in convert2spss.sas. With this type of conversion, CED2AR program is unable to process variable level summary statistics.
-This option works if variable level summary statistics are not important.  You should use option to ignore variable level summary statistics when uploading the dataset using CED2AR upload menu.
+This is a one step process to convert SAS to SPSS using a SAS script. With this type of conversion, CED2AR is unable to create variable level summary statistics. This option works if variable level summary statistics are not important. 
 
-https://github.com/ncrncornell/DatasetConversions/blob/master/SAS2SPSS/convert2spss.sas
-###
- 
+[SAS2SPSS/convert2spss.sas](SAS2SPSS/convert2spss.sas)
+
+## Direct conversion from SAS to STATA
+The direct conversion by SAS creates a valid STATA file that is not successfully read by CED2AR. At this time, the reason is unknown. Post-processing using STATA solves the problem. 
+
+### STEP I: Convert SAS dataset into STATA using  SAS script
+[SAS2STATA/sas2stata.sas](SAS2STATA/sas2stata.sas)
+
+### STEP II: Post-process STATA in STATA
+With the following post-processing code, the generated Stata file is readable by CED2AR:
+
+```
+use MYDATA
+saveold MYDATA, version(12) replace 
+```
 
 
 
